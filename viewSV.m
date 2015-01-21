@@ -5,13 +5,13 @@ alphablend=.5;
 npix=imH*imW;
 
 
-for t=1:179
+for t=1:20
     im = getFrame(sceneInfo,t);
     imcol = im;
 
     thisF=sp_labels(:,:,t);
     
-    [u,v]=find(thisF==3);
+    [u,v]=find(thisF==13);
     imind=sub2ind(size(thisF),u,v);
     
     col=[1 0 0];
